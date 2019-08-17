@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="BMSpace.MainPage">
+    <c:CirclePage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Text="BMSpace Auto" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+            <Label Grid.Row="1" x:Name="TxtDeviceName" HorizontalOptions="Center"></Label>
+            <StackLayout Grid.Row="2" Margin="20,0,20,0">
+                <Button x:Name="BtnOn" Clicked="Control_On_Device" BackgroundColor="DarkBlue" Text="On"></Button>
+                <Button x:Name="BtnOff" Clicked="Control_Off_Device" BackgroundColor="DarkRed" Text="Off"></Button>
+            </StackLayout>
+        </Grid>
+
+
+    </c:CirclePage.Content>
+    <c:CirclePage.ActionButton>
+        <c:ActionButtonItem
+			x:Name="NextBtn"
+			Clicked="NextBtn_Clicked"
+			 Text="Next" />
+    </c:CirclePage.ActionButton>
+</c:CirclePage>
